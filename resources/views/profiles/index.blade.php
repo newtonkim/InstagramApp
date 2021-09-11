@@ -8,10 +8,9 @@
             </div>
             <div class="col-9 p-5">
                 <div class="d-flex justify-content-between align-item-baseline">
-                    <h1>{{$user->username}}</h1>
-
-                    <div class="d-flex pr-4">
-                        <button class="btn btn-primary">follow</button>
+                    <div class="d-flex align-items-center">
+                        <div class="h4 pt-2">{{$user->username}}</div>
+                        <button class="btn btn-primary ml-4 mb-2">follow</button>
                     </div>
                   
 
