@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container d-flex justify-content-center">
       <form action="/post" enctype="multipart/form-data" method="POST">
         @csrf
         <div class="row">
