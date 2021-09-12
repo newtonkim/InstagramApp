@@ -10,7 +10,11 @@
                 <div class="d-flex justify-content-between align-item-baseline">
                     <div class="d-flex align-items-center">
                         <div class="h4 pt-2">{{$user->username}}</div>
-                        <button class="btn btn-primary ml-4 mb-2">follow</button>
+                      
+                        <follow-button 
+                            user-id="{{ $user->id }}" 
+                            follows="{{$follows}}">
+                        </follow-button>
                     </div>
                   
 
