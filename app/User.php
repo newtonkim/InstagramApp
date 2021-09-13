@@ -2,9 +2,11 @@
 
 namespace App;
 
+use App\Mail\NewUserWelcomeMall;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
@@ -43,10 +45,10 @@ class User extends Authenticatable
         parent::boot();
 
         static::created(function($user) {
-
             $user->profile()->create([
                 'title' => $user->username,
             ]);
+
         });
     }
 

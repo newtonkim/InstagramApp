@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container d-flex justify-content-center">
-      <form action="/profile/{{$user->id}}" enctype="multipart/form-data" method="POST">
+      <form action="/profile/{{ $user->id }}"method="POST">
         @csrf
         @method('PATCH')
         <div class="row">

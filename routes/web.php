@@ -11,9 +11,13 @@
 |
 */
 
+use App\Mail\NewUserWelcomeMall;
 
+Auth::routes(); 
 
-Auth::routes();
+Route::get('/email', function () {
+    return new NewUserWelcomeMall();
+});
 
 Route::post('/follow/{user}', 'FollowersController@store')->name('follow.store');
 
